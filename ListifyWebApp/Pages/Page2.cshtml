@@ -1,0 +1,26 @@
+﻿@page
+@model ListifyWebApp.Pages.Page2Model
+@{
+   
+}
+<link href="~/css/Page2.css" rel="stylesheet" />
+<div class="divForAddList"> 
+<form method="post"  asp-page-handler="AddListify">
+        
+    <div class="inputForTask">
+       <input asp-for="@Model.listify.Name" type="text" placeholder="List name:">
+    </div>
+    <div id="placeholderForTasks"></div>
+    <button id="addTaskButton">Add task</button>
+    <button id="submitButton" type="submit">Submit</button>
+
+</form>
+</div>
+
+<script src="~/js/site.js"></script>
+    
+
+
+
+
+

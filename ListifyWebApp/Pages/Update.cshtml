@@ -1,0 +1,49 @@
+﻿@page 
+@using ListifyWebApp.Models;
+@model ListifyWebApp.Pages.UpdateModel
+@{
+}
+
+
+<div class="displayboxUpdate">
+    <div class ="divForTasks">
+        <form method="post" asp-page-handler="DeleteListify" asp-route-id="@Model.listify.Id">
+            <p>Listify: </p>
+        <input id="inputName" name="infostring" asp-for="@Model.listify.Name" /> <button id="saveButton" type="submit" name="saveListify" runat="server" value="save">
+            <img id="saveImg" src="~/Resorses/pics/Save-Button.png" />
+        </button>
+        <button id="deleteButton" type="submit" name="deleteListify" runat="server" value="delete">
+            <img id="deleteImg" src="~/Resorses/pics/Trash-Bin.png" />
+            </form>
+    </div>
+        @foreach (Models.ItemTask itemTask in @Model.Tasks)
+    {
+            
+        <form method="post" asp-route-id="@itemTask.Id">   
+           <div class="divForTasks">
+             <input name="info" asp-for="@itemTask.TaskDescription">
+           <button id="saveButton" type="submit" name="save" runat="server" value="save">
+              <img id="saveImg" src="~/Resorses/pics/Save-Button.png" />
+           </button>
+           <button id="deleteButton" type="submit" name="delete" runat="server" value="delete">
+               <img id="deleteImg" src="~/Resorses/pics/Trash-Bin.png" />
+           </button>
+           </div>
+        </form>
+        }
+    </div>
+</div>
+<script src="~/js/site.js"/>
+        
+
+
+
+
+   
+
+
+
+
+
+
+

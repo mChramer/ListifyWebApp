@@ -1,0 +1,26 @@
+﻿@page
+@model ListifyWebApp.Pages.Page3Model
+@{
+
+}
+<link href="~/css/Page3.css" rel="stylesheet" />
+<div class="divForAddList">
+
+    @foreach (var listify in Model.Listifies)
+    {
+       <div class="inputForTask">
+          <form method="post" asp-route-id="@listify.Id">
+             <button id="floatMe" type="submit">Edit</button>
+             <div><p>@listify.Name</p></div>
+                <ol>
+                    @foreach (Models.ItemTask item in listify.tasks)
+                    {
+                        <div>
+                              <li ><p>@item.TaskDescription</p></li>
+                        </div>
+                    }
+                </ol>
+          </form>
+        </div>
+    }
+</div>

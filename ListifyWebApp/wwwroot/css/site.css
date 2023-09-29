@@ -1,0 +1,270 @@
+
+
+html {
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: #F4F3EE
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #F4F3EE;
+
+}
+footer {
+    background-color: #463F3A;
+    color: #F4F3EE;
+}
+#copywrite{
+    margin-left: 30px;
+}
+
+header {
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    background-color: #E0AFA0;
+    top: 0;
+    z-index: 9;
+    
+}
+
+main {
+    background-color: #F4F3EE;
+    display: flex;
+    align-items:baseline;
+    justify-content:center;
+    margin-top: 15vh;
+    grid-column: 2;
+    z-index:3;
+}
+body > footer {
+    clear: both; /* vet inte den här koden!*/
+    width: 100vw;
+    background-color: #463F3A;
+    position: sticky;
+    top: 100%;
+}
+#Headlinetext {
+    font-family: Lucida Handwriting;
+    display: flex;
+    justify-content: space-around;
+    justify-content: left;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 350%;
+    color: #463F3A;
+    margin-left: 50px;
+}
+#textunderline{
+    text-decoration:none;
+    height: 100%;
+}
+#grid {
+    margin-top: 80px;
+    display: grid;
+    grid-auto-columns: 15% 85%;
+    grid-template-rows: auto;
+}
+
+#buttonEditDelete {
+    
+    background-color: #463F3A;
+    border: none;
+    color: white;
+    padding: 20px 32px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%
+}
+#buttonViewList {
+    
+    background-color: #463F3A;
+    border: none;
+    color: white;
+    padding: 20px 32px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    z-index: 10;
+}
+
+aside {
+    float: left;
+    height: 100%;
+    background-color: #8A817C;
+    top: 15vh;
+    left: 0;
+    grid-column: 1;
+    min-height: 1000px;
+    
+}
+.divForTasks {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    outline: solid 2px #463F3A;
+    
+}
+
+.displayboxUpdate {
+    padding: 20px;
+    background-color: #F4F3EE;
+    border: solid 5px #463F3A;
+}
+#saveButton {
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    width: 60px;
+    border: 0px;
+    cursor: pointer;
+    background-color:transparent;
+}
+#saveImg{
+    height:30px;
+    width: 30px;
+}
+#deleteButton {
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    width: 60px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#deleteImg {
+    height: 30px;
+    width: 30px;
+}
+
+.inputWindow {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.button {
+    transition-duration: 0.4s;
+}
+#buttonEditDelete:hover {
+    
+    box-shadow: 0px 0px 3px 3px #463F3A;
+}
+#buttonViewList:hover {
+    box-shadow: 0px 0px 3px 3px #463F3A;
+}
+#addTaskButton{
+    margin:10px;
+}
+#submitButton{
+    margin:10px;
+}
+.divForAddList {
+    padding: 20px;
+    background-color: #F4F3EE;
+    border: solid 5px #463F3A;
+    width: 50%;
+}
+    .divForAddList:hover {
+        box-shadow: 10px 10px 10px 10px #463F3A;
+}
+.wrapper {
+    display: flex;
+}
+
+    .wrapper .static-txt {
+        color: #463F3A;
+        font-size: 60px;
+        font-weight: 400;
+    }
+
+    .wrapper .dynamic-txts {
+        margin-left: 15px;
+        height: 90px;
+        line-height: 90px;
+        overflow: hidden;
+    }
+
+.dynamic-txts li {
+    list-style: none;
+    color: #E0AFA0;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.dynamic-txts li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 80px;
+}
+
+    .dynamic-txts li span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #F4F3EE;
+        border-left: 2px solid #FC6D6D;
+        animation: typing 3s steps(10) infinite;
+    }
+.inputForTask {
+    padding: 10px;
+    border: 2px solid #463F3A;
+    box-shadow: 2px 2px 2px 0px #463F3A;
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: calc(100% + 30px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+.displayboxUpdate{
+    width: 50%;
+}
+.displayboxUpdate:hover {
+    box-shadow: 10px 10px 10px 10px #463F3A;
+}
+#inputName{
+    font-weight:700; 
+}
+#floatMe{
+    float:right;
+    padding: 0px;
+    margin:0;
+}
+   
